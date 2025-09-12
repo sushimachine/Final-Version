@@ -1,0 +1,376 @@
+/* ========================
+   Global Layout
+======================== */
+.startup-board {
+  padding: 2rem;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ========================
+   Header
+======================== */
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.board-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.upload-btn {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.upload-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* ========================
+   Startup Grid + Cards
+======================== */
+.startup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.startup-card {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  border-radius: 20px;
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.startup-card:hover {
+  transform: translateY(-6px);
+}
+
+.startup-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 1rem;
+}
+
+.startup-card h2 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* ========================
+   Funding Progress
+======================== */
+.progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+  height: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0.8rem 0;
+}
+
+.progress {
+  background: #00ff88;
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.funding {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* ========================
+   Card Buttons
+======================== */
+.card-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+.support-btn {
+  background: #ffcc00;
+  color: #222;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.support-btn:hover {
+  background: #ffb700;
+}
+
+.view-btn {
+  background: white;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.view-btn:hover {
+  background: #f1f1f1;
+}
+
+/* ========================
+   Modal Form
+======================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 450px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.upload-form input,
+.upload-form textarea,
+.upload-form select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.upload-form textarea {
+  resize: vertical;
+}
+
+.upload-form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.upload-form input[type="file"] {
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn {
+  background: #28a745;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit-btn:hover {
+  background: #218838;
+}
+
+/* ========================
+   Profile Page
+======================== */
+.profile-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.back-btn {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+.back-btn:hover {
+  background: #222;
+}
+
+.profile-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.profile-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #ff7e5f;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-tagline {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.profile-desc {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.profile-info p {
+  margin: 0.3rem 0;
+}
+
+.profile-funding {
+  margin: 1.2rem 0;
+}
+
+.profile-funding h3 {
+  margin-bottom: 0.6rem;
+}
+
+/* ========================
+   Comments Section
+======================== */
+.comments-section {
+  margin-top: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.comment-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.comment-btn:hover {
+  background: #0069d9;
+}
+
+.comments-list {
+  margin-top: 1rem;
+}
+
+.comment {
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment-text {
+  margin-bottom: 0.4rem;
+}
+
+.comment-meta {
+  font-size: 0.8rem;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-comments {
+  font-style: italic;
+  color: #777;
+}
+
+/* ========================
+   Animations
+======================== */
+.slide-in-left {
+  animation: slideInLeft 0.6s ease forwards;
+}
+.slide-in-right {
+  animation: slideInRight 0.6s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
