@@ -12,6 +12,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Routes>
+           <Route path="/" element={<Landing />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/faqs' element={<FaqPage />} />
           <Route path='/home' element={<Landing />} />
