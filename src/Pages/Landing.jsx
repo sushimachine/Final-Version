@@ -8,8 +8,6 @@ const Landing = () => {
   const bannerImages = [
     "/Images/banner.png",
     "/Images/banner1.png",
-    "/Images/banner2.jpg",
-    "/Images/banner3.png",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 

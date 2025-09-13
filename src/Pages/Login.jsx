@@ -180,7 +180,7 @@ const Login = () => {
                 marginTop: 0,
               }}
             >
-              <h2 style={{ textAlign: "center", marginTop: "90px" }}>LogIn</h2>
+              <h1 style={{ textAlign: "center", marginTop: "90px" , fontSize: "35px" }}>LogIn</h1>
 
               <select
                 style={inputStyle}

@@ -6,6 +6,7 @@ import EventsPage from "./Events";
 import JobOpportunitiesPage from "./JobOpportunitiesPage";
 import StartupBoard from "./StartupBoard";
 import { AlumniPortal } from "./AlumniDirectory";
+import { useNavigate } from "react-router-dom";
 
 import { MdGroups2 } from "react-icons/md";
 import {
@@ -39,8 +40,15 @@ const Dashboard = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showNewsModal, setShowNewsModal] = useState(false);
   const [showContactModal, setShowContactModal] = useState(false);
-  const [showProfileModal, setShowProfileModal] = useState(false); // ✅ New state
+  const [showProfileModal, setShowProfileModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+
+  const navigate = useNavigate(); // ✅ useNavigate here
+
+  const handleLogout = () => {
+    alert("Logged out successfully!");
+    navigate("/"); // ✅ redirect to home
+  };
 
   const menuItems = [
     { name: "Dashboard", icon: <FiHome /> },
@@ -63,10 +71,6 @@ const Dashboard = () => {
     "🎓 Alumni webinar scheduled for next week",
     "💼 50+ new internships added this month",
   ];
-
-  const handleLogout = () => {
-    alert("Logged out successfully!");
-  };
 
   const recentActivities = [
     { id: 1, type: "Job Application", detail: "Applied to Google Internship", time: "2 hours ago" },
@@ -167,7 +171,7 @@ const Dashboard = () => {
             {/* Profile */}
             <div className="user-info" onClick={() => setShowProfileModal(true)}>
               <img
-                src="https://i.pravatar.cc/40"
+                src="/Images/profile.webp"
                 alt="profile"
                 className="profile-pic"
               />
